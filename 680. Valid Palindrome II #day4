@@ -1,0 +1,39 @@
+class Solution {
+    public boolean validPalindrome(String s) {
+       StringBuilder sb = new StringBuilder(s);
+       String s2 =  sb.toString();
+        if (isPalindrome(s2)==true) {
+            return true;
+        }
+        int n= helper(s2);
+        sb.deleteCharAt(n);
+        if(isPalindrome(sb.toString())==true){
+            return true;
+        }
+        sb= new StringBuilder(s);
+        sb.deleteCharAt(s.length()-1-n);
+        if(isPalindrome(sb.toString())==true){
+            return true;
+        }
+    return false;
+
+    }
+
+    public static int helper(String str){
+        for( int i=0; i< str.length()/2; i++){
+            if(str.charAt(i)!=str.charAt(str.length()-i-1)){
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    public static boolean isPalindrome(String str){
+        for( int i=0; i< str.length()/2; i++){
+            if(str.charAt(i)!=str.charAt(str.length()-i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
