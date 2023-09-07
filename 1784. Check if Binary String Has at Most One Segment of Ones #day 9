@@ -1,0 +1,32 @@
+class Solution {
+    public boolean checkOnesSegment(String s) {
+//here we solved the question without considering s[0[ = 1, as the question only needs '01' string in it to return false
+        
+        int right= s.length()-1;
+        for( int left=0; left< s.length(); left++){
+            char l= s.charAt(left);
+            char r= s.charAt(right);
+            if(l=='0' && r=='0'){
+                right--;
+                continue;
+            }
+            else if(l=='0' && r=='1'){
+                continue;
+            }
+            else if(l=='1' && r=='0'){
+                left--;
+                right--;
+                continue;
+            }
+            else if(l=='1' && r =='1'){
+                System.out.println(left+ right);
+                for( int i=left; i<right; i++){
+                    if(s.charAt(i)=='0'){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+}
