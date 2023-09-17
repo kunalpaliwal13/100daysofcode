@@ -1,0 +1,37 @@
+class Solution {
+    public static int isPresent(int nums[], int k){
+        int len = nums.length;
+        int left =0;
+        int right = len-1;
+        while(left<=right){        
+            int mid = left+ (right-left)/2;
+            if(nums[mid]==k){return mid;}
+            else if(nums[mid]<k){left= mid+1;}
+            else if(nums[mid]>k){right = mid-1;}
+            
+            
+        }
+        return -1;
+    }
+    public int searchInsert(int[] nums, int target) {
+        //finding if it is in 
+        int ispres= isPresent(nums, target);
+        if(ispres!=-1){return ispres;}
+
+        if(target>nums[nums.length-1]){return nums.length;}
+        if(target<nums[0]){return 0;}
+        
+        //executes if not present 
+        int start=0;
+        int end =nums.length-1;
+        int mid =0;
+        while(start< end){
+            mid = start+(end-start)/2;
+            if(nums[mid]<target){if(nums[mid+1]>target){return mid+1;}else{start= mid+1;}}
+            else if(nums[mid]>target){if(nums[mid-1]<target){return mid;}else{end= mid-1;}}
+            else{return mid;}
+        }
+        return mid;
+    }
+
+}
