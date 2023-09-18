@@ -1,0 +1,16 @@
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        int n = arr.length;
+        int left = 0; 
+        int right = n-1;
+        while(left<right){
+            int mid = left + (right-left)/2;
+            int leftEle=arr[mid];
+            int rightEle= arr[mid+1];
+            if(leftEle< rightEle){left= mid+1;}
+            else if(leftEle>rightEle){right = mid;}
+            
+        }
+        return left;
+    }
+}
