@@ -5,7 +5,7 @@ class Solution {
         for( int i=0; i< grid.length; i++){
             int left =0; 
             int right =col;
-            while(left<=right){
+            while(left<=right){ 
                 int mid=left+(right-left)/2;
                 
                 if(grid[i][mid]<0){
