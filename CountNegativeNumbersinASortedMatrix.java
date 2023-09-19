@@ -1,5 +1,5 @@
 class Solution {
-    public int countNegatives(int[][] grid) {
+    public int countNegatives(int[][] grid){
         int col = grid[0].length-1;
         int count =0;
         for( int i=0; i< grid.length; i++){
