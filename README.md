@@ -4,5 +4,5 @@ This is a repository where i post leetcode problems solved by me to advance in m
 ### Algos:
 - double pointer
 - hare n turtle aproach
-- binary search
+- binary search 
 - counter approach
