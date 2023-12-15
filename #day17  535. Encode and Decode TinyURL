@@ -5,7 +5,7 @@ public class Codec {
         return longUrl;
     }
 
-    // Decodes a shortened URL to its original URL.
+    // Decodes a shortened URL to its original  URL.
     public String decode(String shortUrl) {
         return shortUrl;
     }
