@@ -6,7 +6,7 @@ class Solution {
         long mid=0;
         while(start<end){
             mid= start+(end-start)/2;
-            long res= mid*mid;
+            long res= mid*mid; 
             if(res<num){
                 start=mid;
                 continue;
