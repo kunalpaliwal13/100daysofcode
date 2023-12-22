@@ -1,6 +1,6 @@
 # Buble sort 
 comparison sort method
-
+ 
 <img src ='https://github.com/kunalpaliwal13/leetcode/assets/143526414/09433552-6d54-4f3f-b3ec-a6f83d891c8a' height = 290>
 
 At every step the largest element from each iteration comes to the end of the unsorted part of the array 
